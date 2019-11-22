@@ -131,6 +131,7 @@ class Coaches extends Widget_Base {
     }
 
     private function template($settings_args) {
+        global $templ;
         if( ! empty( $settings_args['posts_per_page'] )){ 
 			$args = array( 
 				'post_type'      => 'coaches',
@@ -146,10 +147,10 @@ class Coaches extends Widget_Base {
 						if($query->have_posts()):
 							while ( $query->have_posts() ) {
 								$query->the_post();
-								labremo_theme()->get_landing_coaches(get_post_format());
+								$templ->get_landing_coaches(get_post_format());
 							}
 						else:
-							echo __('Coaches not found', 'labremo');
+							echo __('Coaches not found', 'elementor-labremo');
 						endif;
 					wp_reset_postdata();
 					?>
@@ -160,7 +161,7 @@ class Coaches extends Widget_Base {
 			<?
 
 		} else {
-			echo esc_html__( 'Coaches not found!', 'labremo' );
+			echo esc_html__( 'Coaches not found!', 'elementor-labremo' );
 		}
     }
 
@@ -181,8 +182,6 @@ class Coaches extends Widget_Base {
 		);
 
         // pass the args through the corresponding shortcode callback
-		// debug($args);
-
         $this->template($settings_args);
 
     }
@@ -193,8 +192,6 @@ class Coaches extends Widget_Base {
      *
      * @access protected
      */
-    protected function _content_template() {
-        // $this->template($settings_args);
-    }
+    protected function _content_template() {}
 
 }
