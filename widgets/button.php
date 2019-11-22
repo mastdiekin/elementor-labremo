@@ -20,9 +20,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Elementor 'Hero' widget.
+ * Elementor 'Button' widget.
  *
- * Elementor widget that displays an 'Hero' with lightbox.
+ * Elementor widget that displays an 'Button' with lightbox.
  *
  * @since 1.0.0
  */
@@ -31,7 +31,7 @@ class Button extends Widget_Base {
     /**
      * Get widget name.
      *
-     * Retrieve 'Hero' widget name.
+     * Retrieve 'Button' widget name.
      *
      * @since 1.0.0
      * @access public
@@ -45,7 +45,7 @@ class Button extends Widget_Base {
     /**
      * Get widget title.
      *
-     * Retrieve 'Hero' widget title.
+     * Retrieve 'Button' widget title.
      *
      * @since 1.0.0
      * @access public
@@ -59,7 +59,7 @@ class Button extends Widget_Base {
     /**
      * Get widget icon.
      *
-     * Retrieve 'Hero' widget icon.
+     * Retrieve 'Button' widget icon.
      *
      * @since 1.0.0
      * @access public
@@ -73,7 +73,7 @@ class Button extends Widget_Base {
     /**
      * Get widget categories.
      *
-     * Retrieve 'Hero' widget icon.
+     * Retrieve 'Button' widget icon.
      *
      * @since 1.0.0
      * @access public
@@ -85,7 +85,7 @@ class Button extends Widget_Base {
     }
 
     /**
-     * Register 'Hero' widget controls.
+     * Register 'Button' widget controls.
      *
      * Adds different input fields to allow the user to change and customize the widget settings.
      *
@@ -189,7 +189,7 @@ class Button extends Widget_Base {
     }
 
     /**
-     * Render 'Hero' widget output on the frontend.
+     * Render 'Button' widget output on the frontend.
      *
      * Written in PHP and used to generate the final HTML.
      *

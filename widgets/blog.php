@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Elementor 'Hero' widget.
+ * Elementor 'Blog' widget.
  *
  * Elementor widget that displays an 'Hero' with lightbox.
  *
@@ -31,7 +31,7 @@ class Blogs extends Widget_Base {
     /**
      * Get widget name.
      *
-     * Retrieve 'Hero' widget name.
+     * Retrieve 'Blog' widget name.
      *
      * @since 1.0.0
      * @access public
@@ -45,7 +45,7 @@ class Blogs extends Widget_Base {
     /**
      * Get widget title.
      *
-     * Retrieve 'Hero' widget title.
+     * Retrieve 'Blog' widget title.
      *
      * @since 1.0.0
      * @access public
@@ -59,7 +59,7 @@ class Blogs extends Widget_Base {
     /**
      * Get widget icon.
      *
-     * Retrieve 'Hero' widget icon.
+     * Retrieve 'Blog' widget icon.
      *
      * @since 1.0.0
      * @access public
@@ -73,7 +73,7 @@ class Blogs extends Widget_Base {
     /**
      * Get widget categories.
      *
-     * Retrieve 'Hero' widget icon.
+     * Retrieve 'Blog' widget icon.
      *
      * @since 1.0.0
      * @access public
@@ -85,7 +85,7 @@ class Blogs extends Widget_Base {
     }
 
     /**
-     * Register 'Hero' widget controls.
+     * Register 'Blog' widget controls.
      *
      * Adds different input fields to allow the user to change and customize the widget settings.
      *
@@ -159,7 +159,7 @@ class Blogs extends Widget_Base {
     }
 
     /**
-     * Render 'Hero' widget output on the frontend.
+     * Render 'Blog' widget output on the frontend.
      *
      * Written in PHP and used to generate the final HTML.
      *

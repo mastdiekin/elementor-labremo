@@ -20,9 +20,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Elementor 'Hero' widget.
+ * Elementor 'Testimonial' widget.
  *
- * Elementor widget that displays an 'Hero' with lightbox.
+ * Elementor widget that displays an 'Testimonial' with lightbox.
  *
  * @since 1.0.0
  */
@@ -31,7 +31,7 @@ class Testimonial extends Widget_Base {
     /**
      * Get widget name.
      *
-     * Retrieve 'Hero' widget name.
+     * Retrieve 'Testimonial' widget name.
      *
      * @since 1.0.0
      * @access public
@@ -45,7 +45,7 @@ class Testimonial extends Widget_Base {
     /**
      * Get widget title.
      *
-     * Retrieve 'Hero' widget title.
+     * Retrieve 'Testimonial' widget title.
      *
      * @since 1.0.0
      * @access public
@@ -59,7 +59,7 @@ class Testimonial extends Widget_Base {
     /**
      * Get widget icon.
      *
-     * Retrieve 'Hero' widget icon.
+     * Retrieve 'Testimonial' widget icon.
      *
      * @since 1.0.0
      * @access public
@@ -73,7 +73,7 @@ class Testimonial extends Widget_Base {
     /**
      * Get widget categories.
      *
-     * Retrieve 'Hero' widget icon.
+     * Retrieve 'Testimonial' widget icon.
      *
      * @since 1.0.0
      * @access public
@@ -85,7 +85,7 @@ class Testimonial extends Widget_Base {
     }
 
     /**
-     * Register 'Hero' widget controls.
+     * Register 'Testimonial' widget controls.
      *
      * Adds different input fields to allow the user to change and customize the widget settings.
      *
@@ -212,7 +212,7 @@ class Testimonial extends Widget_Base {
     }
 
     /**
-     * Render 'Hero' widget output on the frontend.
+     * Render 'Testimonial' widget output on the frontend.
      *
      * Written in PHP and used to generate the final HTML.
      *
