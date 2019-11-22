@@ -81,7 +81,7 @@ class Hero extends Widget_Base {
      * @return string Widget icon.
      */
     public function get_categories() {
-        return [ 'general' ];
+        return [ 'labremo' ];
     }
 
     /**
@@ -226,357 +226,357 @@ class Hero extends Widget_Base {
         /*   Hero Section
         /*-------------------------------------*/
 
-        $this->start_controls_section(
-            'tab_section',
-            array(
-                'label' => __( 'Hero', 'elementor-labremo' ),
-                'tab' => Controls_Manager::TAB_STYLE
-            )
-        );
+        // $this->start_controls_section(
+        //     'tab_section',
+        //     array(
+        //         'label' => __( 'Hero', 'elementor-labremo' ),
+        //         'tab' => Controls_Manager::TAB_STYLE
+        //     )
+        // );
 
-        $this->add_control(
-            'tab_cursor',
-            array(
-                'label'   => __( 'Mouse Cursor', 'elementor-labremo' ),
-                'type'    => Controls_Manager::SELECT,
-                'options' => array(
-                    'default' => __( 'Default', 'elementor-labremo' ),
-                    'pointer' => __( 'Pointer', 'elementor-labremo' ),
-                    'zoom-in' => __( 'Zoom', 'elementor-labremo' ),
-                    'help'    => __( 'Help', 'elementor-labremo' )
-                ),
-                'default'   => 'pointer',
-                'selectors'  => array(
-                    '{{WRAPPER}} .tabs > li:not(.active)' => 'cursor: {{VALUE}};'
-                )
-            )
-        );
+        // $this->add_control(
+        //     'tab_cursor',
+        //     array(
+        //         'label'   => __( 'Mouse Cursor', 'elementor-labremo' ),
+        //         'type'    => Controls_Manager::SELECT,
+        //         'options' => array(
+        //             'default' => __( 'Default', 'elementor-labremo' ),
+        //             'pointer' => __( 'Pointer', 'elementor-labremo' ),
+        //             'zoom-in' => __( 'Zoom', 'elementor-labremo' ),
+        //             'help'    => __( 'Help', 'elementor-labremo' )
+        //         ),
+        //         'default'   => 'pointer',
+        //         'selectors'  => array(
+        //             '{{WRAPPER}} .tabs > li:not(.active)' => 'cursor: {{VALUE}};'
+        //         )
+        //     )
+        // );
 
-        $this->add_responsive_control(
-            'tab_padding',
-            array(
-                'label'      => __( 'Padding', 'elementor-labremo' ),
-                'type'       => Controls_Manager::DIMENSIONS,
-                'size_units' => array( 'px', 'em', '%' ),
-                'selectors'  => array(
-                    '{{WRAPPER}} .tabs > li' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                )
-            )
-        );
+        // $this->add_responsive_control(
+        //     'tab_padding',
+        //     array(
+        //         'label'      => __( 'Padding', 'elementor-labremo' ),
+        //         'type'       => Controls_Manager::DIMENSIONS,
+        //         'size_units' => array( 'px', 'em', '%' ),
+        //         'selectors'  => array(
+        //             '{{WRAPPER}} .tabs > li' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+        //         )
+        //     )
+        // );
 
-        /*$this->add_responsive_control(
-            'tab_margin',
-            array(
-                'label'              => __( 'Margin', 'elementor-labremo' ),
-                'type'               => Controls_Manager::DIMENSIONS,
-                'size_units'         => array( 'px', 'em' ),
-                'allowed_dimensions' => 'all',
-                'selectors'          => array(
-                    '{{WRAPPER}} .tabs > li' => 'margin:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-                )
-            )
-        );*/
+        // /*$this->add_responsive_control(
+        //     'tab_margin',
+        //     array(
+        //         'label'              => __( 'Margin', 'elementor-labremo' ),
+        //         'type'               => Controls_Manager::DIMENSIONS,
+        //         'size_units'         => array( 'px', 'em' ),
+        //         'allowed_dimensions' => 'all',
+        //         'selectors'          => array(
+        //             '{{WRAPPER}} .tabs > li' => 'margin:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+        //         )
+        //     )
+        // );*/
 
-        $this->add_control(
-            'tab_border_radius',
-            array(
-                'label'      => __( 'Border Radius', 'elementor-labremo' ),
-                'type'       => Controls_Manager::DIMENSIONS,
-                'size_units' => array( 'px', 'em', '%' ),
-                'selectors'  => array(
-                    '{{WRAPPER}} .tabs > li' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}; overflow:hidden;'
-                ),
-                'allowed_dimensions' => 'all',
-                'separator'  => 'after'
-            )
-        );
+        // $this->add_control(
+        //     'tab_border_radius',
+        //     array(
+        //         'label'      => __( 'Border Radius', 'elementor-labremo' ),
+        //         'type'       => Controls_Manager::DIMENSIONS,
+        //         'size_units' => array( 'px', 'em', '%' ),
+        //         'selectors'  => array(
+        //             '{{WRAPPER}} .tabs > li' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}; overflow:hidden;'
+        //         ),
+        //         'allowed_dimensions' => 'all',
+        //         'separator'  => 'after'
+        //     )
+        // );
 
-        $this->start_controls_tabs( 'tab_status' );
+        // $this->start_controls_tabs( 'tab_status' );
 
-        $this->start_controls_tab(
-            'tab_status_normal',
-            array(
-                'label' => __( 'Normal' , 'elementor-labremo' )
-            )
-        );
+        // $this->start_controls_tab(
+        //     'tab_status_normal',
+        //     array(
+        //         'label' => __( 'Normal' , 'elementor-labremo' )
+        //     )
+        // );
 
-        $this->add_group_control(
-            Group_Control_Box_Shadow::get_type(),
-            array(
-                'name'      => 'tab_boxshadow_normal',
-                'label'     => __( 'Box Shadow', 'elementor-labremo' ),
-                'selector'  => '{{WRAPPER}} .tabs > li',
-                'separator' => 'none'
-            )
-        );
+        // $this->add_group_control(
+        //     Group_Control_Box_Shadow::get_type(),
+        //     array(
+        //         'name'      => 'tab_boxshadow_normal',
+        //         'label'     => __( 'Box Shadow', 'elementor-labremo' ),
+        //         'selector'  => '{{WRAPPER}} .tabs > li',
+        //         'separator' => 'none'
+        //     )
+        // );
 
-        $this->add_group_control(
-            Group_Control_Border::get_type(),
-            array(
-                'name'      => 'tab_border_normal',
-                'selector'  => '{{WRAPPER}} .tabs > li',
-                'separator' => 'none'
-            )
-        );
+        // $this->add_group_control(
+        //     Group_Control_Border::get_type(),
+        //     array(
+        //         'name'      => 'tab_border_normal',
+        //         'selector'  => '{{WRAPPER}} .tabs > li',
+        //         'separator' => 'none'
+        //     )
+        // );
 
-        $this->add_group_control(
-            Group_Control_Background::get_type(),
-            array(
-                'name'      => 'tab_background_normal',
-                'selector'  => '{{WRAPPER}} .tabs > li',
-                'separator' => 'none'
-            )
-        );
+        // $this->add_group_control(
+        //     Group_Control_Background::get_type(),
+        //     array(
+        //         'name'      => 'tab_background_normal',
+        //         'selector'  => '{{WRAPPER}} .tabs > li',
+        //         'separator' => 'none'
+        //     )
+        // );
 
-        $this->end_controls_tab();
-
-
-        $this->start_controls_tab(
-            'tab_status_hover',
-            array(
-                'label' => __( 'Hover' , 'elementor-labremo' )
-            )
-        );
-
-        $this->add_group_control(
-            Group_Control_Box_Shadow::get_type(),
-            array(
-                'name'      => 'tab_boxshadow_hover',
-                'label'     => __( 'Box Shadow Normal', 'elementor-labremo' ),
-                'selector'  => '{{WRAPPER}} .tabs > li:hover',
-                'separator' => 'none'
-            )
-        );
-
-        $this->add_group_control(
-            Group_Control_Border::get_type(),
-            array(
-                'name'      => 'tab_border_hover',
-                'selector'  => '{{WRAPPER}} .tabs > li:hover',
-                'separator' => 'none'
-            )
-        );
-
-        $this->add_group_control(
-            Group_Control_Background::get_type(),
-            array(
-                'name'      => 'tab_background_hover',
-                'selector'  => '{{WRAPPER}} .tabs > li:hover',
-                'separator' => 'none'
-            )
-        );
-
-        $this->end_controls_tab();
+        // $this->end_controls_tab();
 
 
-        $this->start_controls_tab(
-            'title_bar_status_active',
-            array(
-                'label' => __( 'Selected' , 'elementor-labremo' )
-            )
-        );
+        // $this->start_controls_tab(
+        //     'tab_status_hover',
+        //     array(
+        //         'label' => __( 'Hover' , 'elementor-labremo' )
+        //     )
+        // );
 
-        $this->add_group_control(
-            Group_Control_Box_Shadow::get_type(),
-            array(
-                'name'      => 'title_bar_boxshadow_active',
-                'label'     => __( 'Box Shadow Normal', 'elementor-labremo' ),
-                'selector'  => '{{WRAPPER}} .tabs > li.active',
-                'separator' => 'none'
-            )
-        );
+        // $this->add_group_control(
+        //     Group_Control_Box_Shadow::get_type(),
+        //     array(
+        //         'name'      => 'tab_boxshadow_hover',
+        //         'label'     => __( 'Box Shadow Normal', 'elementor-labremo' ),
+        //         'selector'  => '{{WRAPPER}} .tabs > li:hover',
+        //         'separator' => 'none'
+        //     )
+        // );
 
-        $this->add_group_control(
-            Group_Control_Border::get_type(),
-            array(
-                'name'      => 'title_bar_border_active',
-                'selector'  => '{{WRAPPER}} .tabs > li.active',
-                'separator' => 'none'
-            )
-        );
+        // $this->add_group_control(
+        //     Group_Control_Border::get_type(),
+        //     array(
+        //         'name'      => 'tab_border_hover',
+        //         'selector'  => '{{WRAPPER}} .tabs > li:hover',
+        //         'separator' => 'none'
+        //     )
+        // );
 
-        $this->add_group_control(
-            Group_Control_Background::get_type(),
-            array(
-                'name'      => 'title_bar_background_active',
-                'selector'  => '{{WRAPPER}} .tabs > li.active',
-                'separator' => 'none'
-            )
-        );
+        // $this->add_group_control(
+        //     Group_Control_Background::get_type(),
+        //     array(
+        //         'name'      => 'tab_background_hover',
+        //         'selector'  => '{{WRAPPER}} .tabs > li:hover',
+        //         'separator' => 'none'
+        //     )
+        // );
 
-        $this->end_controls_tab();
-
-        $this->end_controls_tabs();
+        // $this->end_controls_tab();
 
 
-        $this->end_controls_section();
+        // $this->start_controls_tab(
+        //     'title_bar_status_active',
+        //     array(
+        //         'label' => __( 'Selected' , 'elementor-labremo' )
+        //     )
+        // );
+
+        // $this->add_group_control(
+        //     Group_Control_Box_Shadow::get_type(),
+        //     array(
+        //         'name'      => 'title_bar_boxshadow_active',
+        //         'label'     => __( 'Box Shadow Normal', 'elementor-labremo' ),
+        //         'selector'  => '{{WRAPPER}} .tabs > li.active',
+        //         'separator' => 'none'
+        //     )
+        // );
+
+        // $this->add_group_control(
+        //     Group_Control_Border::get_type(),
+        //     array(
+        //         'name'      => 'title_bar_border_active',
+        //         'selector'  => '{{WRAPPER}} .tabs > li.active',
+        //         'separator' => 'none'
+        //     )
+        // );
+
+        // $this->add_group_control(
+        //     Group_Control_Background::get_type(),
+        //     array(
+        //         'name'      => 'title_bar_background_active',
+        //         'selector'  => '{{WRAPPER}} .tabs > li.active',
+        //         'separator' => 'none'
+        //     )
+        // );
+
+        // $this->end_controls_tab();
+
+        // $this->end_controls_tabs();
+
+
+        // $this->end_controls_section();
 
 
         /*   Title Style Section
         /*-------------------------------------*/
 
-        $this->start_controls_section(
-            'title_style_section',
-            array(
-                'label'     => __( 'Title', 'elementor-labremo' ),
-                'tab'       => Controls_Manager::TAB_STYLE
-            )
-        );
+        // $this->start_controls_section(
+        //     'title_style_section',
+        //     array(
+        //         'label'     => __( 'Title', 'elementor-labremo' ),
+        //         'tab'       => Controls_Manager::TAB_STYLE
+        //     )
+        // );
 
-        $this->start_controls_tabs( 'title_colors' );
+        // $this->start_controls_tabs( 'title_colors' );
 
-        $this->start_controls_tab(
-            'title_color_normal',
-            array(
-                'label' => __( 'Normal' , 'elementor-labremo' )
-            )
-        );
+        // $this->start_controls_tab(
+        //     'title_color_normal',
+        //     array(
+        //         'label' => __( 'Normal' , 'elementor-labremo' )
+        //     )
+        // );
 
-        $this->add_control(
-            'title_color',
-            array(
-                'label'     => __( 'Color', 'elementor-labremo' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => array(
-                    '{{WRAPPER}} .tabs a' => 'color: {{VALUE}} !important;'
-                )
-            )
-        );
+        // $this->add_control(
+        //     'title_color',
+        //     array(
+        //         'label'     => __( 'Color', 'elementor-labremo' ),
+        //         'type'      => Controls_Manager::COLOR,
+        //         'selectors' => array(
+        //             '{{WRAPPER}} .tabs a' => 'color: {{VALUE}} !important;'
+        //         )
+        //     )
+        // );
 
-        $this->end_controls_tab();
+        // $this->end_controls_tab();
 
-        $this->start_controls_tab(
-            'title_color_hover',
-            array(
-                'label' => __( 'Hover' , 'elementor-labremo' )
-            )
-        );
+        // $this->start_controls_tab(
+        //     'title_color_hover',
+        //     array(
+        //         'label' => __( 'Hover' , 'elementor-labremo' )
+        //     )
+        // );
 
-        $this->add_control(
-            'title_hover_color',
-            array(
-                'label'     => __( 'Color', 'elementor-labremo' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => array(
-                    '{{WRAPPER}} .tabs li:hover a' => 'color: {{VALUE}} !important;',
-                )
-            )
-        );
+        // $this->add_control(
+        //     'title_hover_color',
+        //     array(
+        //         'label'     => __( 'Color', 'elementor-labremo' ),
+        //         'type'      => Controls_Manager::COLOR,
+        //         'selectors' => array(
+        //             '{{WRAPPER}} .tabs li:hover a' => 'color: {{VALUE}} !important;',
+        //         )
+        //     )
+        // );
 
-        $this->end_controls_tab();
+        // $this->end_controls_tab();
 
-        $this->end_controls_tabs();
+        // $this->end_controls_tabs();
 
-        $this->add_group_control(
-            Group_Control_Typography::get_type(),
-            array(
-                'name'      => 'title_typography',
-                'scheme'    => Scheme_Typography::TYPOGRAPHY_1,
-                'selector'  => '{{WRAPPER}} .tabs a'
-            )
-        );
+        // $this->add_group_control(
+        //     Group_Control_Typography::get_type(),
+        //     array(
+        //         'name'      => 'title_typography',
+        //         'scheme'    => Scheme_Typography::TYPOGRAPHY_1,
+        //         'selector'  => '{{WRAPPER}} .tabs a'
+        //     )
+        // );
 
-        $this->end_controls_section();
+        // $this->end_controls_section();
 
         /*   Content Style Section
         /*-------------------------------------*/
 
-        $this->start_controls_section(
-            'content_style_section',
-            array(
-                'label'     => __( 'Content', 'elementor-labremo' ),
-                'tab'       => Controls_Manager::TAB_STYLE
-            )
-        );
+        // $this->start_controls_section(
+        //     'content_style_section',
+        //     array(
+        //         'label'     => __( 'Content', 'elementor-labremo' ),
+        //         'tab'       => Controls_Manager::TAB_STYLE
+        //     )
+        // );
 
-        $this->add_control(
-            'content_color',
-            array(
-                'label'     => __( 'Color', 'elementor-labremo' ),
-                'type'      => Controls_Manager::COLOR,
-                'selectors' => array(
-                    '{{WRAPPER}} .tabs-content .entry-editor' => 'color: {{VALUE}}'
-                )
-            )
-        );
+        // $this->add_control(
+        //     'content_color',
+        //     array(
+        //         'label'     => __( 'Color', 'elementor-labremo' ),
+        //         'type'      => Controls_Manager::COLOR,
+        //         'selectors' => array(
+        //             '{{WRAPPER}} .tabs-content .entry-editor' => 'color: {{VALUE}}'
+        //         )
+        //     )
+        // );
 
-        $this->add_group_control(
-            Group_Control_Typography::get_type(),
-            array(
-                'name'     => 'content_typography',
-                'scheme'   => Scheme_Typography::TYPOGRAPHY_1,
-                'selector' => '{{WRAPPER}} .tabs-content .entry-editor'
-            )
-        );
+        // $this->add_group_control(
+        //     Group_Control_Typography::get_type(),
+        //     array(
+        //         'name'     => 'content_typography',
+        //         'scheme'   => Scheme_Typography::TYPOGRAPHY_1,
+        //         'selector' => '{{WRAPPER}} .tabs-content .entry-editor'
+        //     )
+        // );
 
-        $this->add_responsive_control(
-            'content_padding',
-            array(
-                'label'      => __( 'Padding', 'elementor-labremo' ),
-                'type'       => Controls_Manager::DIMENSIONS,
-                'size_units' => array( 'px', 'em', '%' ),
-                'separator'  => 'before',
-                'selectors'  => array(
-                    '{{WRAPPER}} .tabs-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                )
-            )
-        );
+        // $this->add_responsive_control(
+        //     'content_padding',
+        //     array(
+        //         'label'      => __( 'Padding', 'elementor-labremo' ),
+        //         'type'       => Controls_Manager::DIMENSIONS,
+        //         'size_units' => array( 'px', 'em', '%' ),
+        //         'separator'  => 'before',
+        //         'selectors'  => array(
+        //             '{{WRAPPER}} .tabs-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+        //         )
+        //     )
+        // );
 
-        $this->add_responsive_control(
-            'content_margin',
-            array(
-                'label'              => __( 'Margin', 'elementor-labremo' ),
-                'type'               => Controls_Manager::DIMENSIONS,
-                'size_units'         => array( 'px', 'em' ),
-                'allowed_dimensions' => 'all',
-                'selectors'          => array(
-                    '{{WRAPPER}} .tabs-content' => 'margin:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
-                )
-            )
-        );
+        // $this->add_responsive_control(
+        //     'content_margin',
+        //     array(
+        //         'label'              => __( 'Margin', 'elementor-labremo' ),
+        //         'type'               => Controls_Manager::DIMENSIONS,
+        //         'size_units'         => array( 'px', 'em' ),
+        //         'allowed_dimensions' => 'all',
+        //         'selectors'          => array(
+        //             '{{WRAPPER}} .tabs-content' => 'margin:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+        //         )
+        //     )
+        // );
 
-        $this->add_control(
-            'content_border_radius',
-            array(
-                'label'      => __( 'Border Radius', 'elementor-labremo' ),
-                'type'       => Controls_Manager::DIMENSIONS,
-                'size_units' => array( 'px', 'em', '%' ),
-                'selectors'  => array(
-                    '{{WRAPPER}} .tabs-content' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}; overflow:hidden;'
-                ),
-                'allowed_dimensions' => 'all',
-                'separator' => 'before'
-            )
-        );
+        // $this->add_control(
+        //     'content_border_radius',
+        //     array(
+        //         'label'      => __( 'Border Radius', 'elementor-labremo' ),
+        //         'type'       => Controls_Manager::DIMENSIONS,
+        //         'size_units' => array( 'px', 'em', '%' ),
+        //         'selectors'  => array(
+        //             '{{WRAPPER}} .tabs-content' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}; overflow:hidden;'
+        //         ),
+        //         'allowed_dimensions' => 'all',
+        //         'separator' => 'before'
+        //     )
+        // );
 
-        $this->add_group_control(
-            Group_Control_Box_Shadow::get_type(),
-            array(
-                'name'      => 'content_shadow',
-                'selector'  => '{{WRAPPER}} .tabs-content',
-                'separator' => 'none'
-            )
-        );
+        // $this->add_group_control(
+        //     Group_Control_Box_Shadow::get_type(),
+        //     array(
+        //         'name'      => 'content_shadow',
+        //         'selector'  => '{{WRAPPER}} .tabs-content',
+        //         'separator' => 'none'
+        //     )
+        // );
 
-        $this->add_group_control(
-            Group_Control_Border::get_type(),
-            array(
-                'name'      => 'content_border',
-                'selector'  => '{{WRAPPER}} .tabs-content',
-                'separator' => 'none'
-            )
-        );
+        // $this->add_group_control(
+        //     Group_Control_Border::get_type(),
+        //     array(
+        //         'name'      => 'content_border',
+        //         'selector'  => '{{WRAPPER}} .tabs-content',
+        //         'separator' => 'none'
+        //     )
+        // );
 
-        $this->add_group_control(
-            Group_Control_Background::get_type(),
-            array(
-                'name'      => 'content_background',
-                'selector'  => '{{WRAPPER}} .tabs-content',
-                'separator' => 'none'
-            )
-        );
+        // $this->add_group_control(
+        //     Group_Control_Background::get_type(),
+        //     array(
+        //         'name'      => 'content_background',
+        //         'selector'  => '{{WRAPPER}} .tabs-content',
+        //         'separator' => 'none'
+        //     )
+        // );
 
-        $this->end_controls_section();
+        // $this->end_controls_section();
     }
 
     /**
@@ -597,12 +597,13 @@ class Hero extends Widget_Base {
             // 'style'        => $settings['skin'],
             'slides'         => $settings['hero_items'],
             //'type'         => $settings['type'],
-			'slide_id_prefix'=> substr( $this->get_id_int(), 0, 3 )
+            'slide_id_prefix'=> substr( $this->get_id_int(), 0, 3 ),
+            'other'          => $settings
 		);
 
         // pass the args through the corresponding shortcode callback
 		// debug($args);
-		$templ->get_slider(null, $args);
+		$templ->get_slider($args);
     }
 
 
@@ -695,7 +696,7 @@ class Hero extends Widget_Base {
 
 									view.addInlineEditingAttributes( tabContentKey, 'advanced' );
 									#>
-									<div class="hero__slide swiper-slide" {{{ view.getRenderAttributeString( tabContentKey ) }}}>
+									<div class="hero__slide swiper-slide {{ item.style }}" {{{ view.getRenderAttributeString( tabContentKey ) }}}>
 										<div class="hero__slide-parallax">
 											<div class="hero__slide-image" style="background-image: url('{{ item.image.url }}');" data-scrollax="properties: { translateY: '30%' }"></div>
 											<div class="hero__slide-text">

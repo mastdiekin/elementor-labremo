@@ -59,9 +59,9 @@ class Plugin {
 	 * @access private
 	 */
 	private function include_widgets_files() {
-		require_once( __DIR__ . '/widgets/hero.php' );
 		require_once( __DIR__ . '/widgets/inline-editing.php' );
 		require_once( __DIR__ . '/widgets/hero.php' );
+		require_once( __DIR__ . '/widgets/coaches.php' );
 	}
 
 	/**
@@ -78,7 +78,18 @@ class Plugin {
 
 		// Register Widgets
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Hero() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Coaches() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Inline_Editing() );
+	}
+
+	function register_widget_categories( $elements_manager ) {
+		$elements_manager->add_category(
+			'labremo',
+			[
+				'title' => __( 'Labremo', 'elementor-labremo' ),
+				'icon' => 'fa fa-plug',
+			]
+		);
 	}
 
 	/**
@@ -96,6 +107,9 @@ class Plugin {
 
 		// Register widgets
 		add_action( 'elementor/widgets/widgets_registered', [ $this, 'register_widgets' ] );
+
+		// Register category
+		add_action( 'elementor/elements/categories_registered', [ $this, 'register_widget_categories' ] );
 	}
 }
 
