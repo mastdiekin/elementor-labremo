@@ -63,6 +63,7 @@ class Plugin {
 		require_once( __DIR__ . '/widgets/hero.php' );
 		require_once( __DIR__ . '/widgets/coaches.php' );
 		require_once( __DIR__ . '/widgets/classes.php' );
+		require_once( __DIR__ . '/widgets/blog.php' );
 	}
 
 	/**
@@ -81,6 +82,7 @@ class Plugin {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Hero() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Coaches() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Classes() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Blogs() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Inline_Editing() );
 	}
 
