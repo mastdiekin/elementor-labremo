@@ -99,7 +99,7 @@ class Coaches extends Widget_Base {
         /*-----------------------------------------------------------------------------------*/
 
         $this->start_controls_section(
-            'hero_items_section',
+            'coaches_items_section',
             array(
                 'label'      => __('Content', 'elementor-labremo' ),
             )
@@ -113,19 +113,6 @@ class Coaches extends Widget_Base {
                 'default'     => 6
             )
         );
-
-        // $this->add_control(
-        //     'skin',
-        //     array(
-        //         'label'       => __('Skin','elementor-labremo' ),
-        //         'type'        => Controls_Manager::SELECT, //'labremo-visual-select',
-        //         'options'     => array(
-        //             'bordered'          => __('Bordered', 'elementor-labremo' ),
-        //             'labremo-stripe'        => __('No border', 'elementor-labremo')
-        //         ),
-        //         'default'     => 'bordered'
-        //     )
-        // );
 
         $this->end_controls_section();
     }

@@ -99,7 +99,7 @@ class Classes extends Widget_Base {
         /*-----------------------------------------------------------------------------------*/
 
         $this->start_controls_section(
-            'hero_items_section',
+            'classes_items_section',
             array(
                 'label'      => __('Content', 'elementor-labremo' ),
             )

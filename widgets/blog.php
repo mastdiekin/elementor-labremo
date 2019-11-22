@@ -99,7 +99,7 @@ class Blogs extends Widget_Base {
         /*-----------------------------------------------------------------------------------*/
 
         $this->start_controls_section(
-            'hero_items_section',
+            'blog_items_section',
             array(
                 'label'      => __('Content', 'elementor-labremo' ),
             )
