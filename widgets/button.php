@@ -67,7 +67,7 @@ class Button extends Widget_Base {
      * @return string Widget icon.
      */
     public function get_icon() {
-        return 'eicon-countdown';
+        return 'eicon-dual-button';
     }
 
     /**
