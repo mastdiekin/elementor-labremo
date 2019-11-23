@@ -399,17 +399,17 @@ class Pricing extends Widget_Base {
 		<!-- begin pricing__table -->
 		<div class="pricing__table">
 			<!-- begin content -->
-			<div class="content h">
+			<!-- <div class="content h"> -->
 				<!-- begin container -->
-				<div class="container nopad">
+				<!-- <div class="container nopad"> -->
 					<!-- begin row -->
 					<div class="row">
 						<? $this->template($args); ?>
 					</div>
 					<!-- end row -->
-				</div>
+				<!-- </div> -->
 				<!-- end container -->
-			</div>
+			<!-- </div> -->
 			<!-- end content -->
 		</div>
 		<!-- end pricing__table -->
