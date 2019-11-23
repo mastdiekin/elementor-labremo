@@ -276,107 +276,6 @@ class Pricing extends Widget_Base {
 		$this->end_controls_section();
 	}
 
-	private function template($args) {
-		foreach($args['prices'] as $price) {
-			if($price) {
-				$top_sub_title          = $price['top_sub_title'];
-				$top_title              = $price['top_title'];
-				$middle_title           = $price['middle_title'];
-				$middle_price           = $price['middle_price'];
-				$middle_price_currency  = $price['middle_price_currency'];
-				$bottom_title           = $price['bottom_title'];
-				$bottom_price           = $price['bottom_price'];
-				$bottom_price_currency  = $price['bottom_price_currency'];
-				$content                = $price['content'];
-				$button_style           = $price['button_style'];
-				$pricing_label          = $price['pricing_label'];
-				$button_class           = $price['button_class'];
-				$button_link            = $price['button_link'];
-				$button_color           = $price['button_color'];
-				?>
-				<div class="col-xl-4 col-md-6">
-					<!-- begin pricing__item-wrap -->
-					<div class="pricing__item-wrap">
-						<?if($pricing_label):?>
-						<div class="pricing__label">
-							<?php echo $pricing_label; ?>
-						</div>
-						<?endif;?>
-						<!-- begin pricing__item -->
-						<div class="pricing__item">
-							<!-- begin pricing__item-top -->
-							<div class="pricing__item-top">
-								<div class="pricing__title">
-									<?if($top_sub_title):?>
-									<span class="sub"><?echo $top_sub_title;?></span>
-									<?endif;?>
-									<?if($top_title):?>
-									<span class="title"><?echo $top_title;?></span>
-									<?endif;?>
-								</div>
-								<div class="pricing__price big">
-									<?if($middle_title):?>
-									<div class="pricing__price-title">
-										<?echo $middle_title;?>
-									</div>
-									<?endif;?>
-									<div class="pricing__price-count">
-										<?if($middle_price):?>
-										<span class="count">
-											<?echo $middle_price;?>
-										</span>
-										<?endif;?>
-										<?if($middle_price_currency):?>
-										<span class="currency">
-											<?echo $middle_price_currency;?>
-										</span>
-										<?endif;?>
-									</div>
-								</div>
-								<div class="pricing__price small">
-									<?if($bottom_title):?>
-									<div class="pricing__price-title">
-										<?echo $bottom_title;?>
-									</div>
-									<?endif;?>
-									<div class="pricing__price-count">
-										<?if($bottom_price):?>
-										<span class="count">
-											<?echo $bottom_price;?>
-										</span>
-										<?endif;?>
-										<?if($bottom_price_currency):?>
-										<span class="currency">
-											<?echo $bottom_price_currency;?>
-										</span>
-										<?endif;?>
-									</div>
-								</div>
-							</div>
-							<!-- end pricing__item-top -->
-							<!-- begin pricing__item-bottom -->
-							<div class="pricing__item-bottom">
-								<?if($content):?>
-								<?echo $content;?>
-								<?endif;?>
-							</div>
-							<!-- end pricing__item-bottom -->
-							<div class="pricing__button-mask <?if($button_style === 'squire'): echo 'v1'; elseif($button_style === 'quad'): echo 'v2'; endif;?> <?echo $button_color;?>"></div>
-						</div>
-						<!-- end pricing__item -->
-						<a href="<? if($button_link): echo $button_link; else: echo '#'; endif;?>" class="pricing__button <?if($button_style === 'squire'): echo 'v1'; elseif($button_style === 'quad'): echo 'v2'; endif;?> <?echo $button_color;?><?if($button_class): echo ' '.$button_class; endif;?>">
-							<i class="fa fa-check"></i>
-						</a>
-					</div>
-					<!-- end pricing__item-wrap -->
-				</div>
-				<?
-			} else {
-				echo __('Prices not found', 'elementor-labremo');
-			}
-		}
-	}
-
 	/**
 	 * Render 'Pricing' widget output on the frontend.
 	 *
@@ -386,6 +285,7 @@ class Pricing extends Widget_Base {
 	 * @access protected
 	 */
 	protected function render() {
+		global $templ;
 		$settings = $this->get_settings_for_display();
 
 		$args     = array(
@@ -395,25 +295,7 @@ class Pricing extends Widget_Base {
 		);
 
 		// pass the args through the corresponding shortcode callback
-		?>
-		<!-- begin pricing__table -->
-		<div class="pricing__table">
-			<!-- begin content -->
-			<!-- <div class="content h"> -->
-				<!-- begin container -->
-				<!-- <div class="container nopad"> -->
-					<!-- begin row -->
-					<div class="row">
-						<? $this->template($args); ?>
-					</div>
-					<!-- end row -->
-				<!-- </div> -->
-				<!-- end container -->
-			<!-- </div> -->
-			<!-- end content -->
-		</div>
-		<!-- end pricing__table -->
-		<?
+		$templ->get_landing_prices($args);
 	}
 
 
