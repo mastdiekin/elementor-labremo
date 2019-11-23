@@ -28,93 +28,93 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class Testimonial extends Widget_Base {
 
-    /**
-     * Get widget name.
-     *
-     * Retrieve 'Testimonial' widget name.
-     *
-     * @since 1.0.0
-     * @access public
-     *
-     * @return string Widget name.
-     */
-    public function get_name() {
-        return 'labremo_testimonial';
-    }
+	/**
+	 * Get widget name.
+	 *
+	 * Retrieve 'Testimonial' widget name.
+	 *
+	 * @since 1.0.0
+	 * @access public
+	 *
+	 * @return string Widget name.
+	 */
+	public function get_name() {
+		return 'labremo_testimonial';
+	}
 
-    /**
-     * Get widget title.
-     *
-     * Retrieve 'Testimonial' widget title.
-     *
-     * @since 1.0.0
-     * @access public
-     *
-     * @return string Widget title.
-     */
-    public function get_title() {
-        return __('Labremo Testimonial', 'elementor-labremo' );
-    }
+	/**
+	 * Get widget title.
+	 *
+	 * Retrieve 'Testimonial' widget title.
+	 *
+	 * @since 1.0.0
+	 * @access public
+	 *
+	 * @return string Widget title.
+	 */
+	public function get_title() {
+		return __('Labremo Testimonial', 'elementor-labremo' );
+	}
 
-    /**
-     * Get widget icon.
-     *
-     * Retrieve 'Testimonial' widget icon.
-     *
-     * @since 1.0.0
-     * @access public
-     *
-     * @return string Widget icon.
-     */
-    public function get_icon() {
-        return 'eicon-testimonial-carousel';
-    }
+	/**
+	 * Get widget icon.
+	 *
+	 * Retrieve 'Testimonial' widget icon.
+	 *
+	 * @since 1.0.0
+	 * @access public
+	 *
+	 * @return string Widget icon.
+	 */
+	public function get_icon() {
+		return 'eicon-testimonial-carousel';
+	}
 
-    /**
-     * Get widget categories.
-     *
-     * Retrieve 'Testimonial' widget icon.
-     *
-     * @since 1.0.0
-     * @access public
-     *
-     * @return string Widget icon.
-     */
-    public function get_categories() {
-        return [ 'labremo' ];
-    }
+	/**
+	 * Get widget categories.
+	 *
+	 * Retrieve 'Testimonial' widget icon.
+	 *
+	 * @since 1.0.0
+	 * @access public
+	 *
+	 * @return string Widget icon.
+	 */
+	public function get_categories() {
+		return [ 'labremo' ];
+	}
 
-    /**
-     * Register 'Testimonial' widget controls.
-     *
-     * Adds different input fields to allow the user to change and customize the widget settings.
-     *
-     * @since 1.0.0
-     * @access protected
-     */
-    protected function _register_controls() {
+	/**
+	 * Register 'Testimonial' widget controls.
+	 *
+	 * Adds different input fields to allow the user to change and customize the widget settings.
+	 *
+	 * @since 1.0.0
+	 * @access protected
+	 */
+	protected function _register_controls() {
 
-        /*-----------------------------------------------------------------------------------*/
-        /*  Content TAB
-        /*-----------------------------------------------------------------------------------*/
+		/*-----------------------------------------------------------------------------------*/
+		/*  Content TAB
+		/*-----------------------------------------------------------------------------------*/
 
-        $this->start_controls_section(
-            'testimonial_items_section',
-            array(
-                'label'      => __('Content', 'elementor-labremo' ),
-            )
-        );
+		$this->start_controls_section(
+			'testimonial_items_section',
+			array(
+				'label'      => __('Content', 'elementor-labremo' ),
+			)
+		);
 
-        $this->add_control(
-            'posts_per_page',
-            array(
-                'label'       => __('Posts Per Page','elementor-labremo' ),
-                'type'        => Controls_Manager::TEXT, //'labremo-visual-select',
-                'default'     => 3
-            )
-        );
+		$this->add_control(
+			'posts_per_page',
+			array(
+				'label'       => __('Posts Per Page','elementor-labremo' ),
+				'type'        => Controls_Manager::TEXT, //'labremo-visual-select',
+				'default'     => 3
+			)
+		);
 
-        $this->add_control(
+		$this->add_control(
 			'hide_photo',
 			[
 				'label' => __( 'Photo', 'elementor-labremo' ),
@@ -124,9 +124,9 @@ class Testimonial extends Widget_Base {
 				'return_value' => 'yes',
 				'default' => 'no',
 			]
-        );
-        
-        $this->add_control(
+		);
+		
+		$this->add_control(
 			'hide_position',
 			[
 				'label' => __( 'Position', 'elementor-labremo' ),
@@ -136,9 +136,9 @@ class Testimonial extends Widget_Base {
 				'return_value' => 'yes',
 				'default' => 'no',
 			]
-        );
+		);
 
-        $this->add_control(
+		$this->add_control(
 			'hide_name',
 			[
 				'label' => __( 'Name', 'elementor-labremo' ),
@@ -150,24 +150,24 @@ class Testimonial extends Widget_Base {
 			]
 		);
 
-        $this->add_control(
-            'style',
-            array(
-                'label'       => __('Style','elementor-labremo' ),
-                'type'        => Controls_Manager::SELECT, //'labremo-visual-select',
-                'options'     => array(
-                    'Fade'                  => __('Fade', 'elementor-labremo' ),
-                    'Default'               => __('Default', 'elementor-labremo')
-                ),
-                'default'     => 'Fade'
-            )
-        );
+		$this->add_control(
+			'style',
+			array(
+				'label'       => __('Style','elementor-labremo' ),
+				'type'        => Controls_Manager::SELECT, //'labremo-visual-select',
+				'options'     => array(
+					'Fade'                  => __('Fade', 'elementor-labremo' ),
+					'Default'               => __('Default', 'elementor-labremo')
+				),
+				'default'     => 'Fade'
+			)
+		);
 
-        $this->end_controls_section();
-    }
+		$this->end_controls_section();
+	}
 
-    private function template($settings_args) {
-        global $templ;
+	private function template($settings_args) {
+		global $templ;
 
 		if( ! empty( $settings_args['posts_per_page'] )){ 
 			$args = array( 
@@ -209,31 +209,31 @@ class Testimonial extends Widget_Base {
 			echo esc_html__( 'Testimonial not found!', 'labremo' );
 		}
 
-    }
+	}
 
-    /**
-     * Render 'Testimonial' widget output on the frontend.
-     *
-     * Written in PHP and used to generate the final HTML.
-     *
-     * @since 1.0.0
-     * @access protected
-     */
-    protected function render() {
+	/**
+	 * Render 'Testimonial' widget output on the frontend.
+	 *
+	 * Written in PHP and used to generate the final HTML.
+	 *
+	 * @since 1.0.0
+	 * @access protected
+	 */
+	protected function render() {
 
-        $settings = $this->get_settings_for_display();
+		$settings = $this->get_settings_for_display();
 
-        // pass the args through the corresponding shortcode callback
-        $this->template($settings);
+		// pass the args through the corresponding shortcode callback
+		$this->template($settings);
 
-    }
+	}
 
 
-    /**
-     * Render tabs element in the editor.
-     *
-     * @access protected
-     */
-    protected function _content_template() {}
+	/**
+	 * Render tabs element in the editor.
+	 *
+	 * @access protected
+	 */
+	protected function _content_template() {}
 
 }
