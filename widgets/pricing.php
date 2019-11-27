@@ -146,6 +146,13 @@ class Pricing extends Widget_Base {
 						'label_block' => true
 					),
 					array(
+						'name'       => 'top_image',
+						'label'      => __( 'Top Image', 'elementor-labremo' ),
+						'type'       => Controls_Manager::MEDIA,
+						'show_label' => true,
+						'default' => ''
+					),
+					array(
 						'name'        => 'top_title',
 						'label'       => __( 'Top Title', 'elementor-labremo' ),
 						'type'        => Controls_Manager::TEXT,
