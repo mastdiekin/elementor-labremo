@@ -68,6 +68,8 @@ class Plugin {
 		require_once( __DIR__ . '/widgets/button.php' );
 		require_once( __DIR__ . '/widgets/pricing.php' );
 		require_once( __DIR__ . '/widgets/photo.php' );
+		require_once( __DIR__ . '/widgets/scrollax.image.php' );
+		require_once( __DIR__ . '/widgets/scrollax.spacer.php' );
 	}
 
 	/**
@@ -91,6 +93,8 @@ class Plugin {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Button() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Pricing() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Photo() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Scrollax_Image() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Scrollax_Spacer() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Inline_Editing() );
 	}
 

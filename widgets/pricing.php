@@ -152,6 +152,16 @@ class Pricing extends Widget_Base {
 						'show_label' => true,
 						'default' => ''
 					),
+					// array(
+					// 	'name'       => 'top_image',
+					// 	'label'      => __( 'Top Image', 'elementor-labremo' ),
+					// 	'type'       => Controls_Manager::IMAGE_DIMENSIONS,
+					// 	'show_label' => true,
+					// 	'default' => [
+					// 		'width' => 250,
+					// 		'height' => 250,
+					// 	],
+					// ),
 					array(
 						'name'        => 'top_title',
 						'label'       => __( 'Top Title', 'elementor-labremo' ),
