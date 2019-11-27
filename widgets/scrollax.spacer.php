@@ -126,6 +126,28 @@ class Scrollax_Spacer extends Widget_Base {
 		);
 
 		$this->add_control(
+			'direction',
+			array(
+				'label'       => __('Direction of parallax','elementor-labremo' ),
+				'type'        => Controls_Manager::SELECT, //'labremo-visual-select',
+				'options'     => array(
+					'X'                  => 'X',
+					'Y'               => 'Y'
+				),
+				'default'     => 'Y'
+			)
+		);
+
+		$this->add_control(
+			'offset',
+			array(
+				'label'       => __('Offset','elementor-labremo' ),
+				'type'        => Controls_Manager::TEXT, //'labremo-visual-select',
+				'default'     => 30
+			)
+		);
+
+		$this->add_control(
 			'view',
 			[
 				'label' => __( 'View', 'elementor' ),
@@ -146,12 +168,14 @@ class Scrollax_Spacer extends Widget_Base {
 	 * @access protected
 	 */
 	protected function render() {
-		$settings = $this->get_settings_for_display();
-		$bgimage = $settings['_background_image']['url'];
+		$settings  = $this->get_settings_for_display();
+		$bgimage   = $settings['_background_image']['url'];
+		$direction = $settings['direction'];
+		$offset    = $settings['offset'];
 		// debug($settings);
 		?>
 		<div class="elementor-spacer" data-scrollax-parent="true">
-			<div class="elementor-spacer-inner" data-scrollax="properties: { translateX: '5%' }" style="background-image: url(<?echo $bgimage;?>);"></div>
+			<div class="elementor-spacer-inner" data-scrollax="properties: { translate<?echo $direction;?>: '<?echo $offset;?>%' }" style="background-image: url(<?echo $bgimage;?>);"></div>
 		</div>
 		<?php
 	}
