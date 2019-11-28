@@ -111,14 +111,14 @@ class Scrollax_Image extends Widget_Base {
 		$this->start_controls_section(
 			'section_image',
 			[
-				'label' => __( 'Image', 'elementor' ),
+				'label' => __( 'Image', 'elementor-labremo' ),
 			]
 		);
 
 		$this->add_control(
 			'image',
 			[
-				'label' => __( 'Choose Image', 'elementor' ),
+				'label' => __( 'Choose Image', 'elementor-labremo' ),
 				'type' => Controls_Manager::MEDIA,
 				'dynamic' => [
 					'active' => true,
@@ -141,19 +141,19 @@ class Scrollax_Image extends Widget_Base {
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'elementor' ),
+				'label' => __( 'Alignment', 'elementor-labremo' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left' => [
-						'title' => __( 'Left', 'elementor' ),
+						'title' => __( 'Left', 'elementor-labremo' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'elementor' ),
+						'title' => __( 'Center', 'elementor-labremo' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'elementor' ),
+						'title' => __( 'Right', 'elementor-labremo' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -166,12 +166,12 @@ class Scrollax_Image extends Widget_Base {
 		$this->add_control(
 			'caption_source',
 			[
-				'label' => __( 'Caption', 'elementor' ),
+				'label' => __( 'Caption', 'elementor-labremo' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'none' => __( 'None', 'elementor' ),
-					'attachment' => __( 'Attachment Caption', 'elementor' ),
-					'custom' => __( 'Custom Caption', 'elementor' ),
+					'none' => __( 'None', 'elementor-labremo' ),
+					'attachment' => __( 'Attachment Caption', 'elementor-labremo' ),
+					'custom' => __( 'Custom Caption', 'elementor-labremo' ),
 				],
 				'default' => 'none',
 			]
@@ -180,10 +180,10 @@ class Scrollax_Image extends Widget_Base {
 		$this->add_control(
 			'caption',
 			[
-				'label' => __( 'Custom Caption', 'elementor' ),
+				'label' => __( 'Custom Caption', 'elementor-labremo' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => '',
-				'placeholder' => __( 'Enter your image caption', 'elementor' ),
+				'placeholder' => __( 'Enter your image caption', 'elementor-labremo' ),
 				'condition' => [
 					'caption_source' => 'custom',
 				],
@@ -196,13 +196,13 @@ class Scrollax_Image extends Widget_Base {
 		$this->add_control(
 			'link_to',
 			[
-				'label' => __( 'Link', 'elementor' ),
+				'label' => __( 'Link', 'elementor-labremo' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'none',
 				'options' => [
-					'none' => __( 'None', 'elementor' ),
-					'file' => __( 'Media File', 'elementor' ),
-					'custom' => __( 'Custom URL', 'elementor' ),
+					'none' => __( 'None', 'elementor-labremo' ),
+					'file' => __( 'Media File', 'elementor-labremo' ),
+					'custom' => __( 'Custom URL', 'elementor-labremo' ),
 				],
 			]
 		);
@@ -210,12 +210,12 @@ class Scrollax_Image extends Widget_Base {
 		$this->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'elementor' ),
+				'label' => __( 'Link', 'elementor-labremo' ),
 				'type' => Controls_Manager::URL,
 				'dynamic' => [
 					'active' => true,
 				],
-				'placeholder' => __( 'https://your-link.com', 'elementor' ),
+				'placeholder' => __( 'https://your-link.com', 'elementor-labremo' ),
 				'condition' => [
 					'link_to' => 'custom',
 				],
@@ -224,15 +224,37 @@ class Scrollax_Image extends Widget_Base {
 		);
 
 		$this->add_control(
+			'direction',
+			array(
+				'label'       => __('Direction of parallax','elementor-labremo' ),
+				'type'        => Controls_Manager::SELECT, //'labremo-visual-select',
+				'options'     => array(
+					'X'               => 'X',
+					'Y'               => 'Y'
+				),
+				'default'     => 'Y'
+			)
+		);
+
+		$this->add_control(
+			'offset',
+			array(
+				'label'       => __('Offset','elementor-labremo' ),
+				'type'        => Controls_Manager::TEXT, //'labremo-visual-select',
+				'default'     => 30
+			)
+		);
+
+		$this->add_control(
 			'open_lightbox',
 			[
-				'label' => __( 'Lightbox', 'elementor' ),
+				'label' => __( 'Lightbox', 'elementor-labremo' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'default',
 				'options' => [
-					'default' => __( 'Default', 'elementor' ),
-					'yes' => __( 'Yes', 'elementor' ),
-					'no' => __( 'No', 'elementor' ),
+					'default' => __( 'Default', 'elementor-labremo' ),
+					'yes' => __( 'Yes', 'elementor-labremo' ),
+					'no' => __( 'No', 'elementor-labremo' ),
 				],
 				'condition' => [
 					'link_to' => 'file',
@@ -243,7 +265,7 @@ class Scrollax_Image extends Widget_Base {
 		$this->add_control(
 			'view',
 			[
-				'label' => __( 'View', 'elementor' ),
+				'label' => __( 'View', 'elementor-labremo' ),
 				'type' => Controls_Manager::HIDDEN,
 				'default' => 'traditional',
 			]
@@ -254,7 +276,7 @@ class Scrollax_Image extends Widget_Base {
 		$this->start_controls_section(
 			'section_style_image',
 			[
-				'label' => __( 'Image', 'elementor' ),
+				'label' => __( 'Image', 'elementor-labremo' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -262,7 +284,7 @@ class Scrollax_Image extends Widget_Base {
 		$this->add_responsive_control(
 			'width',
 			[
-				'label' => __( 'Width', 'elementor' ),
+				'label' => __( 'Width', 'elementor-labremo' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'unit' => '%',
@@ -297,7 +319,7 @@ class Scrollax_Image extends Widget_Base {
 		$this->add_responsive_control(
 			'space',
 			[
-				'label' => __( 'Max Width', 'elementor' ) . ' (%)',
+				'label' => __( 'Max Width', 'elementor-labremo' ) . ' (%)',
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'unit' => '%',
@@ -333,14 +355,14 @@ class Scrollax_Image extends Widget_Base {
 
 		$this->start_controls_tab( 'normal',
 			[
-				'label' => __( 'Normal', 'elementor' ),
+				'label' => __( 'Normal', 'elementor-labremo' ),
 			]
 		);
 
 		$this->add_control(
 			'opacity',
 			[
-				'label' => __( 'Opacity', 'elementor' ),
+				'label' => __( 'Opacity', 'elementor-labremo' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -367,14 +389,14 @@ class Scrollax_Image extends Widget_Base {
 
 		$this->start_controls_tab( 'hover',
 			[
-				'label' => __( 'Hover', 'elementor' ),
+				'label' => __( 'Hover', 'elementor-labremo' ),
 			]
 		);
 
 		$this->add_control(
 			'opacity_hover',
 			[
-				'label' => __( 'Opacity', 'elementor' ),
+				'label' => __( 'Opacity', 'elementor-labremo' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -400,7 +422,7 @@ class Scrollax_Image extends Widget_Base {
 		$this->add_control(
 			'background_hover_transition',
 			[
-				'label' => __( 'Transition Duration', 'elementor' ),
+				'label' => __( 'Transition Duration', 'elementor-labremo' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -417,7 +439,7 @@ class Scrollax_Image extends Widget_Base {
 		$this->add_control(
 			'hover_animation',
 			[
-				'label' => __( 'Hover Animation', 'elementor' ),
+				'label' => __( 'Hover Animation', 'elementor-labremo' ),
 				'type' => Controls_Manager::HOVER_ANIMATION,
 			]
 		);
@@ -438,7 +460,7 @@ class Scrollax_Image extends Widget_Base {
 		$this->add_responsive_control(
 			'image_border_radius',
 			[
-				'label' => __( 'Border Radius', 'elementor' ),
+				'label' => __( 'Border Radius', 'elementor-labremo' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -463,7 +485,7 @@ class Scrollax_Image extends Widget_Base {
 		$this->start_controls_section(
 			'section_style_caption',
 			[
-				'label' => __( 'Caption', 'elementor' ),
+				'label' => __( 'Caption', 'elementor-labremo' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'caption_source!' => 'none',
@@ -474,23 +496,23 @@ class Scrollax_Image extends Widget_Base {
 		$this->add_control(
 			'caption_align',
 			[
-				'label' => __( 'Alignment', 'elementor' ),
+				'label' => __( 'Alignment', 'elementor-labremo' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left' => [
-						'title' => __( 'Left', 'elementor' ),
+						'title' => __( 'Left', 'elementor-labremo' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'elementor' ),
+						'title' => __( 'Center', 'elementor-labremo' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'elementor' ),
+						'title' => __( 'Right', 'elementor-labremo' ),
 						'icon' => 'eicon-text-align-right',
 					],
 					'justify' => [
-						'title' => __( 'Justified', 'elementor' ),
+						'title' => __( 'Justified', 'elementor-labremo' ),
 						'icon' => 'eicon-text-align-justify',
 					],
 				],
@@ -504,7 +526,7 @@ class Scrollax_Image extends Widget_Base {
 		$this->add_control(
 			'text_color',
 			[
-				'label' => __( 'Text Color', 'elementor' ),
+				'label' => __( 'Text Color', 'elementor-labremo' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -520,7 +542,7 @@ class Scrollax_Image extends Widget_Base {
 		$this->add_control(
 			'caption_background_color',
 			[
-				'label' => __( 'Background Color', 'elementor' ),
+				'label' => __( 'Background Color', 'elementor-labremo' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .widget-image-caption' => 'background-color: {{VALUE}};',
@@ -548,7 +570,7 @@ class Scrollax_Image extends Widget_Base {
 		$this->add_responsive_control(
 			'caption_space',
 			[
-				'label' => __( 'Spacing', 'elementor' ),
+				'label' => __( 'Spacing', 'elementor-labremo' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -612,6 +634,8 @@ class Scrollax_Image extends Widget_Base {
 	 */
 	protected function render() {
 		$settings = $this->get_settings_for_display();
+		$direction = $settings['direction'];
+		$offset    = $settings['offset'];
 
 		if ( empty( $settings['image']['url'] ) ) {
 			return;
@@ -649,7 +673,7 @@ class Scrollax_Image extends Widget_Base {
 			}
 		} ?>
 		<div <?php echo $this->get_render_attribute_string( 'wrapper' ); ?>>
-			<div class="parallax__element" data-scrollax="properties: { translateX: '5%' }">
+			<div class="parallax__element" data-scrollax="properties: { translate<?echo $direction;?>: '<?echo $offset;?>%' }">
 				<?php if ( $has_caption ) : ?>
 					<figure class="wp-caption">
 				<?php endif; ?>
@@ -679,95 +703,7 @@ class Scrollax_Image extends Widget_Base {
 	 * @since 1.0.0
 	 * @access protected
 	 */
-	protected function _content_template() {
-		?>
-		<# if ( settings.image.url ) {
-			var image = {
-				id: settings.image.id,
-				url: settings.image.url,
-				size: settings.image_size,
-				dimension: settings.image_custom_dimension,
-				model: view.getEditModel()
-			};
-
-			var image_url = elementor.imagesManager.getImageUrl( image );
-
-			if ( ! image_url ) {
-				return;
-			}
-
-			var hasCaption = function() {
-				if( ! settings.caption_source || 'none' === settings.caption_source ) {
-					return false;
-				}
-				return true;
-			}
-
-			var ensureAttachmentData = function( id ) {
-				if ( 'undefined' === typeof wp.media.attachment( id ).get( 'caption' ) ) {
-					wp.media.attachment( id ).fetch().then( function( data ) {
-						view.render();
-					} );
-				}
-			}
-
-			var getAttachmentCaption = function( id ) {
-				if ( ! id ) {
-					return '';
-				}
-				ensureAttachmentData( id );
-				return wp.media.attachment( id ).get( 'caption' );
-			}
-
-			var getCaption = function() {
-				if ( ! hasCaption() ) {
-					return '';
-				}
-				return 'custom' === settings.caption_source ? settings.caption : getAttachmentCaption( settings.image.id );
-			}
-
-			var link_url;
-
-			if ( 'custom' === settings.link_to ) {
-				link_url = settings.link.url;
-			}
-
-			if ( 'file' === settings.link_to ) {
-				link_url = settings.image.url;
-			}
-
-			#><div class="elementor-image{{ settings.shape ? ' elementor-image-shape-' + settings.shape : '' }}"><#
-			var imgClass = '';
-
-			if ( '' !== settings.hover_animation ) {
-				imgClass = 'elementor-animation-' + settings.hover_animation;
-			}
-
-			if ( hasCaption() ) {
-				#><figure class="wp-caption"><#
-			}
-
-			if ( link_url ) {
-					#><a class="elementor-clickable" data-elementor-open-lightbox="{{ settings.open_lightbox }}" href="{{ link_url }}"><#
-			}
-						#><img src="{{ image_url }}" class="{{ imgClass }}" /><#
-
-			if ( link_url ) {
-					#></a><#
-			}
-
-			if ( hasCaption() ) {
-					#><figcaption class="widget-image-caption wp-caption-text">{{{ getCaption() }}}</figcaption><#
-			}
-
-			if ( hasCaption() ) {
-				#></figure><#
-			}
-
-			#></div><#
-		} #>
-		<?php
-	}
+	protected function _content_template() {}
 
 	/**
 	 * Retrieve image widget link URL.

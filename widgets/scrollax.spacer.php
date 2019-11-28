@@ -131,7 +131,7 @@ class Scrollax_Spacer extends Widget_Base {
 				'label'       => __('Direction of parallax','elementor-labremo' ),
 				'type'        => Controls_Manager::SELECT, //'labremo-visual-select',
 				'options'     => array(
-					'X'                  => 'X',
+					'X'               => 'X',
 					'Y'               => 'Y'
 				),
 				'default'     => 'Y'
