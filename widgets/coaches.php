@@ -126,15 +126,15 @@ class Coaches extends Widget_Base {
 			);
 			?>
 			<!-- begin coaches__items -->
-			<div class="coaches__items">
-				<!-- begin row -->
-				<div class="row">
+			<div class="coaches__items js__coaches__items swiper-container">
+				<!-- begin swiper-wrapper -->
+				<div class="swiper-wrapper">
 					<?
 					$query = new \WP_Query( $args );
 						if($query->have_posts()):
 							while ( $query->have_posts() ) {
 								$query->the_post();
-								$templ->get_landing_coaches(get_post_format());
+								$templ->get_landing_coaches(get_post_format(), null, null, true);
 							}
 						else:
 							echo __('Coaches not found', 'elementor-labremo');
@@ -142,9 +142,22 @@ class Coaches extends Widget_Base {
 					wp_reset_postdata();
 					?>
 				</div>
-				<!-- end row -->
+				<!-- end swiper-wrapper -->
+				
+				<!-- begin coaches__items-navigation -->
+				<div class="coaches__items-navigation">
+					<button class="coaches__items-next js__coaches__items-next">
+						<i class="fa fa-angle-right"></i>
+					</button>
+					<button class="coaches__items-prev js__coaches__items-prev">
+						<i class="fa fa-angle-left"></i>
+					</button>
+				</div>
+				<!-- end coaches__items-navigation -->
 			</div>
 			<!-- end coaches__items -->
+			
+			
 			<?
 
 		} else {
