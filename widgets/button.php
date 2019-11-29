@@ -182,7 +182,7 @@ class Button extends Widget_Base {
 			<a href="<?echo $link;?>" class="button<?echo $class;?> stripe__button">
 				<span><?echo $text;?></span>
 				<?php if($icon):?>
-					<i class="fa fa-<?echo $icon;?>"></i>
+					<i class="<?echo $icon;?>"></i>
 				<?php endif;?>
 			</a>
 		<?
