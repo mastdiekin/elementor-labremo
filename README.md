@@ -1,5 +1,7 @@
 # Elementor Labremo Gym theme Plugin
 
+Latest release: [here](https://github.com/mastdiekin/elementor-labremo/blob/master/elementor-labremo.zip?raw=true)
+
 Plugin Structure: 
 ```
 assets/
