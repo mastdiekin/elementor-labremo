@@ -39,7 +39,7 @@ final class Elementor_Labremo {
 	 * @since 1.2.0
 	 * @var string The plugin version.
 	 */
-	const VERSION = '1.2.1';
+	const VERSION = '1.2.2';
 
 	/**
 	 * Minimum Elementor Version
