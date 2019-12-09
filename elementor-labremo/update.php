@@ -4,7 +4,7 @@ require ( plugin_dir_path( __FILE__ ) . '/plugin-update-checker-4.8.1/plugin-upd
 
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	'https://github.com/mastdiekin/elementor-labremo/',
-	__FILE__,
+	plugin_dir_path( __FILE__ ) . '/elementor-labremo.php',
 	'elementor-labremo'
 );
 

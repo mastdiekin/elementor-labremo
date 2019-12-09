@@ -3,6 +3,6 @@
 	"version" : "1.2.1",
 	"download_url" : "https://github.com/mastdiekin/elementor-labremo/blob/master/elementor-labremo.zip?raw=true",
 	"sections" : {
-		"description" : "Adding the title / links to the theme developer, from outside the theme (via get parameters)."
+		"description" : "Labremo Gym Elementor plugin."
 	}
 }
