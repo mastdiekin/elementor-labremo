@@ -8,5 +8,4 @@ $updateChecker = Puc_v4_Factory::buildUpdateChecker(
 	'elementor-labremo'
 );
 
-$updateChecker->setBranch('master');
 $updateChecker->getVcsApi()->enableReleaseAssets();
