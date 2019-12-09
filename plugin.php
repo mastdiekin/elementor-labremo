@@ -1,4 +1,6 @@
 <?php
+require_once ( plugin_dir_path( __FILE__ ) . '/update.php' );
+
 namespace ElementorLabremo;
 
 /**
@@ -59,7 +61,6 @@ class Plugin {
 	 * @access private
 	 */
 	private function include_widgets_files() {
-		require_once( __DIR__ . '/widgets/inline-editing.php' );
 		require_once( __DIR__ . '/widgets/hero.php' );
 		require_once( __DIR__ . '/widgets/coaches.php' );
 		require_once( __DIR__ . '/widgets/classes.php' );
@@ -95,7 +96,6 @@ class Plugin {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Photo() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Scrollax_Image() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Scrollax_Spacer() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Inline_Editing() );
 	}
 
 	function register_widget_categories( $elements_manager ) {
