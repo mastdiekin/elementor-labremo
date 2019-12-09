@@ -1,21 +1,21 @@
 {
-  "name": "shortcodes",
-  "version": "1.0.7",
-  "description": "Custom shortcodes.",
-  "main": "shortcodes.php",
+  "name": "elementor-labremo",
+  "version": "1.2.0",
+  "description": "Custom Elementor plugin.",
+  "main": "plugin.php",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mastdiekin/shortcodes.git"
+    "url": "git+https://github.com/mastdiekin/elementor-labremo.git"
   },
   "author": "Surkov Dmitriy (https://github.com/mastdiekin)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mastdiekin/shortcodes/issues"
+    "url": "https://github.com/mastdiekin/elementor-labremo/issues"
   },
-  "homepage": "https://github.com/mastdiekin/shortcodes#readme",
+  "homepage": "https://github.com/mastdiekin/elementor-labremo#readme",
   "devDependencies": {
     "archiver": "^3.0.0"
   }
