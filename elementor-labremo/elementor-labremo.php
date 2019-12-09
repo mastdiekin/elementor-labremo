@@ -1,15 +1,24 @@
 <?php
 /**
+ * Elementor Labremo
+ *
  * Plugin Name: Elementor Labremo
  * Description: Elementor - labremo plugin.
  * Plugin URI:  https://elementor.com/
- * Version:     1.2.1
- * Author:      Dmitriy Surkov
- * Author URI:  https://github.com/mastdiekin
+ * Author: Dmitriy Surkov
+ * Author URI: https://github.com/mastdiekin
+ * Requires at least: 2.3
+ * Tested up to: 5.2.2
+ * Version: 1.2.1
  * Text Domain: elementor-labremo
+ *
+ * @package elementor-labremo
+ * @author  Dmitriy Surkov
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
+require ( plugin_dir_path( __FILE__ ) . '/update.php' );
 
 /**
  * Main Elementor Labremo Class
