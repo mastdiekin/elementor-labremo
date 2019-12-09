@@ -9,7 +9,7 @@
  * Author URI: https://github.com/mastdiekin
  * Requires at least: 2.3
  * Tested up to: 5.2.2
- * Version: 1.2.1
+ * Version: 1.2.2
  * Text Domain: elementor-labremo
  *
  * @package elementor-labremo

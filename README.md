@@ -41,7 +41,7 @@ plugin.php
   * `/scrollax.spacer.php` - Scrollax.spacer Widget class
   * `/testimonial.php` - Testimonial Widget class
 * `index.php`	- Prevent direct access to directories
-* `elementor-hello-world.php`	- Main plugin file, used as a loader if plugin minimum requirements are met.
+* `elementor-labremo.php`	- Main plugin file, used as a loader if plugin minimum requirements are met.
 * `plugin.php` - The actual Plugin file/Class.
 
 For more documentation please see [Elementor Developers Resource](https://developers.elementor.com/creating-an-extension-for-elementor/).

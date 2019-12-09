@@ -12,7 +12,12 @@ Custom Elementor Plugin for Labremo Gym theme.
 
 == Changelog ==
 
-= 1.2.3 =
+= 1.2.2 =
+*Release Date - 9 December 2019*
+
+* fix autoupdater
+
+= 1.2.0 =
 *Release Date - 9 December 2019*
 
 * init plugin
