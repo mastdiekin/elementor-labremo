@@ -3,7 +3,7 @@
  * Plugin Name: Elementor Labremo
  * Description: Elementor - labremo plugin.
  * Plugin URI:  https://elementor.com/
- * Version:     1.2.0
+ * Version:     1.2.1
  * Author:      Dmitriy Surkov
  * Author URI:  https://github.com/mastdiekin
  * Text Domain: elementor-labremo
@@ -30,7 +30,7 @@ final class Elementor_Labremo {
 	 * @since 1.2.0
 	 * @var string The plugin version.
 	 */
-	const VERSION = '1.2.0';
+	const VERSION = '1.2.1';
 
 	/**
 	 * Minimum Elementor Version

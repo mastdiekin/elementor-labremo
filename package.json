@@ -1,6 +1,6 @@
 {
   "name": "elementor-labremo",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Custom Elementor plugin.",
   "main": "plugin.php",
   "scripts": {
